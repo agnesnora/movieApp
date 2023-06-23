@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Comme", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Francois One", sans-serif;
+  color: #f24405;
+  background-color: #a0e3f2;
+}
+
+.header h1 {
+  font-size: 3em;
+}
+
+.header > button {
+  font-family: "Francois One", sans-serif;
+  font-size: 1em;
+  border: 2px solid #f24405;
+  color: #605a8c;
+  border-radius: 8px;
+  padding: 0.8em;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.header--container {
+  padding: 1em 2em 4em 2em;
+  font-family: "Francois One", sans-serif;
+  color: #f24405;
+  background-color: #a0e3f2;
+}
+
+.table--container > button {
+  padding: 0.6em 0.2em;
+  cursor: pointer;
+  display: inline-block;
+  background-color: transparent;
+  border: none;
+  font-family: "Francois One", sans-serif;
+}
+
+.table--container > button:hover {
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 15px;
+  font-family: "Francois One", sans-serif;
+}
+.table--container {
+  display: grid;
+  grid-template-columns: auto 200px 150px 100px 100px;
+  margin: 0.2em;
+  align-items: center;
+  padding: 0 2em;
+}
+
+.table--container p:first-of-type {
+  padding: 0.7em 2em;
+}
+
+.table--container:hover,
+.table--container:nth-child(odd):hover {
+  background-color: #605a8c;
+  color: #fff;
+}
+
+.table--container:active,
+.table--container:nth-child(odd):active {
+  background-color: #a0e3f2;
+  color: #2b2b2b;
+}
+
+.table--container > p {
+  text-align: center;
+
+  display: inline-block;
+}
+
+.table--container:nth-child(odd) {
+  background: #c9b0f2;
+}
+
+.rating {
+  color: black;
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+.green {
+  color: rgb(79, 197, 79);
+}
+.line--background {
+  background: purple;
+}
+.modal--container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: #f0f0f0;
+  width: 100%;
+  border-radius: 15px;
+  position: relative;
+  bottom: -150px;
+  left: 50%;
+}
+
+.modal--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal--details--container {
+  text-align: center;
+  padding: 0.5em;
+}
+
+.modal--header > h2 {
+  color: #605a8c;
+  text-transform: uppercase;
+  margin: 0 0.6em;
+}
+
+.modal--details--container > p {
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.modal--details--wrapper {
+  display: grid;
+  grid-template-columns: auto 200px;
+}
+
+.modal--details--wrapper > p {
+  padding: 0.6em;
+}
+
+.modal--wrapper {
+  display: flex;
+  position: absolute;
+  height: 20vh;
+
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  display: -webkit-box;
+}
+
+.modal--header > button,
+.modal--details--container > button {
+  font-family: "Francois One", sans-serif;
+  font-size: 1em;
+  background-color: #fff;
+  border: #fff;
+  border-radius: 8px;
+  padding: 0.8em 1.2em;
+  margin: 0 0.5em;
+  font-weight: 500;
+  cursor: pointer;
+  color: #605a8c;
+  font-weight: 800;
+}
+
+.form--input,
+.form--button--search,
+.form--button--clear {
+  line-height: 2em;
+  margin: 0.2em;
+  border-radius: 8px;
+  font-family: "Comme", sans-serif;
+  border: 1px solid #f0f0f0;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+}
+
+.form--button--search:hover,
+.form--button--clear:hover {
+  color: black;
+  background-color: #fff;
+  color: #f24405;
+  font-weight: 500;
+}
+
+.modal--container button:hover {
+  background-color: #fff;
+  color: #f24405;
+}
