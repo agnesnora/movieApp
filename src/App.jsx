@@ -10,7 +10,9 @@ function App() {
   const [selectedMovie, setSelectedMovie] = useState("");
   const [searchValue, setSearchValue] = useState("");
   const [modalState, setModalState] = useState(false);
+
   const [isActive, setIsActive] = useState(false);
+  const [deleteMovie, setDeleteMovie] = useState("");
 
   const getMovieDetail = (e) => {
     if (e.target.dataset.select) {
@@ -26,16 +28,20 @@ function App() {
       return movie.Id == filmId;
     })[0];
   }
-
+  useEffect(() => {
+    setMoviesArray(
+      moviesArray.filter((item) => item.Title !== deleteMovie.Title)
+    );
+  }, [deleteMovie]);
   function deleteLine(e) {
     setModalState(false);
     if (e.target.dataset.delete) {
-      setSelectedMovie(selectMovieLine(e.target.dataset.delete));
-      console.log(selectedMovie);
+      // setSelectedMovie(selectMovieLine(e.target.dataset.delete));
+      setDeleteMovie(selectMovieLine(e.target.dataset.delete));
     }
-    setMoviesArray(
-      moviesArray.filter((item) => item.Title !== selectedMovie.Title)
-    );
+    // setMoviesArray(
+    //   moviesArray.filter((item) => item.Title !== selectedMovie.Title)
+    // );
   }
 
   function sortByTitle(arr, propertyName, order = "ascending") {
